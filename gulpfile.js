@@ -6,11 +6,12 @@ var rename = require("gulp-rename");
 
 // SASS TASK - converts all scss documents to css
 gulp.task(
-  'sass', function() {
+  'sass', function(done) {
     return gulp.src('./scss/**/*.scss')
       .pipe(sass().on('error', sass.logError))
       .pipe(rename('style.readable.css'))
       .pipe(gulp.dest('./css'));
+      done();
   }
 );
 
@@ -43,8 +44,8 @@ gulp.task('run', gulp.series('sass', 'css'));
 
 // WATCH TASK
 gulp.task('watch', function() {
-  gulp.watch('./scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('./css/**/*.css', gulp.series('css'));
+  gulp.watch('./scss/**/*.scss', gulp.series('sass','css'));
+  // gulp.watch('./css/**/*.css', gulp.series('css'));
 });
 
 // DEFAULT TASK - runs both the run task (sass and css) and the watch task

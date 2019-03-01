@@ -2,7 +2,8 @@
 
 Uses:
 
-```npm init
+```
+npm init
 npm install gulp -D
 touch gulpfile.js
 npm install gulp-sass --save-dev

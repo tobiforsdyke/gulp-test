@@ -52,6 +52,15 @@
 .border-another {
   border-color: #666; }
 
+.text-newone {
+  color: #bdbdbd; }
+
+.background-newone {
+  background-color: #bdbdbd; }
+
+.border-newone {
+  border-color: #bdbdbd; }
+
 body {
   font: 100% Helvetica, sans-serif;
   color: #222; }

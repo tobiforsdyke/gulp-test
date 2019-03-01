@@ -4,7 +4,8 @@ $colours: (
   'red': #F00,
   'primary': #4f4f4f,
   'secondary': #333,
-  'another': #666
+  'another': #666,
+  'newone': #bdbdbd
 );
 
 @each $colour, $hex in $colours {
