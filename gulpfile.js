@@ -18,16 +18,6 @@ gulp.task(
       done();
   }
 );
-// SASS TASK - without autoprefixer - incuding autoprefixer - converts all scss documents to css
-// gulp.task(
-//   'sass', function(done) {
-//     return gulp.src('./scss/**/*.scss')
-//       .pipe(sass().on('error', sass.logError))
-//       .pipe(rename('style.readable.css'))
-//       .pipe(gulp.dest('./css'));
-//       done();
-//   }
-// );
 
 // CSS TASK - minifies the readable css
 gulp.task(
@@ -42,24 +32,12 @@ gulp.task(
   }
 );
 
-// AUTOPREFIXER TASK
-// gulp.task(
-//   'autoprefixer', () =>
-//     gulp.src('./css/*.css')
-//         .pipe(autoprefixer({
-//             browsers: ['last 2 versions'],
-//             cascade: false
-//         }))
-//         .pipe(gulp.dest('./dist2'))
-// );
-
 // RUN TASK
 gulp.task('run', gulp.series('sass', 'css'));
 
 // WATCH TASK
 gulp.task('watch', function() {
   gulp.watch('./scss/**/*.scss', gulp.series('sass','css'));
-  // gulp.watch('./css/**/*.css', gulp.series('css'));
 });
 
 // DEFAULT TASK - runs both the run task (sass and css) and the watch task
