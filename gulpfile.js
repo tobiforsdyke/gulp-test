@@ -4,16 +4,30 @@ var uglifycss = require('gulp-uglifycss');
 const autoprefixer = require('gulp-autoprefixer');
 var rename = require("gulp-rename");
 
-// SASS TASK - converts all scss documents to css
+// SASS TASK - incuding autoprefixer - converts all scss documents to css
 gulp.task(
   'sass', function(done) {
     return gulp.src('./scss/**/*.scss')
       .pipe(sass().on('error', sass.logError))
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
+      }))
       .pipe(rename('style.readable.css'))
       .pipe(gulp.dest('./css'));
       done();
   }
 );
+// SASS TASK - without autoprefixer - incuding autoprefixer - converts all scss documents to css
+// gulp.task(
+//   'sass', function(done) {
+//     return gulp.src('./scss/**/*.scss')
+//       .pipe(sass().on('error', sass.logError))
+//       .pipe(rename('style.readable.css'))
+//       .pipe(gulp.dest('./css'));
+//       done();
+//   }
+// );
 
 // CSS TASK - minifies the readable css
 gulp.task(
