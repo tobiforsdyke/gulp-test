@@ -70,3 +70,31 @@ article[role="main"] {
   font-feature-settings: "liga" off;
   appearance: 1px bold;
 }
+
+// Testing my WA code
+
+@media only screen and (max-width: 950px) {
+    #wac-divider-div-thin, #wac-divider-div-1, #wac-divider-div-2, #wac-divider-div-3, #wac-divider-div-footer, #events-divider-div-1, #events-divider-div-2, #events-divider-div-3, #events-divider-div-footer, #wac-divider-div-2-twitter, #wac-diplomadivider-div-1, #wac-diplomadivider-div-2, #wac-diplomadivider-div-2-ofsted1, #wac-diplomadivider-div-2-ofsted2, #wac-diplomadivider-div-3, #wac-diplomadivider-div-4, #wac-diplomadivider-div-5, #wac-diplomadivider-div-footer, #wac-diplomadivider-div-footer-ofsted, #wac-inclusionsdivider-div-1, #wac-inclusionsdivider-div-2, #wac-inclusionsdivider-div-3, #wac-inclusionsdivider-div-4, #wac-inclusionsdivider-div-5, #wac-inclusionsdivider-div-6, #wac-inclusionsdivider-div-footer, #wac-collegedivider-div-1, #wac-collegedivider-div-2, #wac-collegedivider-div-3, #wac-collegedivider-div-footer, #wac-interactivedivider-div-1, #wac-interactivedivider-div-2, #wac-interactivedivider-div-3, #wac-interactivedivider-div-4, #wac-interactivedivider-div-footer, #wac-juniordivider-div-1, #wac-juniordivider-div-2, #wac-juniordivider-div-3, #wac-juniordivider-div-4, #wac-juniordivider-div-5, #wac-juniordivider-div-footer, #wac-seniordivider-div-1, #wac-seniordivider-div-2, #wac-seniordivider-div-3, #wac-seniordivider-div-4, #wac-seniordivider-div-5, #wac-seniordivider-div-footer, #wac-reachdivider-div-1, #wac-reachdivider-div-2, #wac-reachdivider-div-footer, #wac-poddivider-div-1, #wac-poddivider-div-2, #wac-poddivider-div-3, #wac-poddivider-div-4, #wac-poddivider-div-footer, .wacartsdividers {
+	margin: 0 -30px!important;
+    height: 220px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+	#wac-divider-div-thin, #wac-divider-div-1, #wac-divider-div-2, #wac-divider-div-3, #wac-divider-div-footer, #events-divider-div-1, #events-divider-div-2, #events-divider-div-3, #events-divider-div-footer, #wac-divider-div-2-twitter, #wac-diplomadivider-div-1, #wac-diplomadivider-div-2, #wac-diplomadivider-div-2-ofsted1, #wac-diplomadivider-div-2-ofsted2, #wac-diplomadivider-div-3, #wac-diplomadivider-div-4, #wac-diplomadivider-div-5, #wac-diplomadivider-div-footer, #wac-diplomadivider-div-footer-ofsted, #wac-inclusionsdivider-div-1, #wac-inclusionsdivider-div-2, #wac-inclusionsdivider-div-3, #wac-inclusionsdivider-div-4, #wac-inclusionsdivider-div-5, #wac-inclusionsdivider-div-6, #wac-inclusionsdivider-div-footer, #wac-collegedivider-div-1, #wac-collegedivider-div-2, #wac-collegedivider-div-3, #wac-collegedivider-div-footer, #wac-interactivedivider-div-1, #wac-interactivedivider-div-2, #wac-interactivedivider-div-3, #wac-interactivedivider-div-4, #wac-interactivedivider-div-footer, #wac-juniordivider-div-1, #wac-juniordivider-div-2, #wac-juniordivider-div-3, #wac-juniordivider-div-4, #wac-juniordivider-div-5, #wac-juniordivider-div-footer, #wac-seniordivider-div-1, #wac-seniordivider-div-2, #wac-seniordivider-div-3, #wac-seniordivider-div-4, #wac-seniordivider-div-5, #wac-seniordivider-div-footer, #wac-reachdivider-div-1, #wac-reachdivider-div-2, #wac-reachdivider-div-footer, #wac-poddivider-div-1, #wac-poddivider-div-2, #wac-poddivider-div-3, #wac-poddivider-div-4, #wac-poddivider-div-footer, .wacartsdividers {
+	margin: -100px -20px 0 -20px!important;
+    height: 150px;
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    }
+    #full-width {
+    margin: 0 -20px!important;
+    }
+    #full-width-slider {
+    margin: -20px -20px 10px -20px!important;
+    }
+}
