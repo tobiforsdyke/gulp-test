@@ -16,7 +16,6 @@ This will watch for any changes to any .scss files and then run the tasks above.
 
 
 **To install:**
-
 ```
 npm init
 npm install gulp -D
@@ -25,4 +24,9 @@ npm install gulp-sass --save-dev
 npm install gulp-uglifycss --save-dev
 npm install gulp-autoprefixer --save-dev
 npm install gulp-rename --save-dev
+```
+
+*If on a new computer that doesn't have gulp setup then first need to install the gulp-cli:*
+```
+npm install -g gulp-cli
 ```
