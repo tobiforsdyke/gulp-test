@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var uglifycss = require('gulp-uglifycss');
 const autoprefixer = require('gulp-autoprefixer');
 var rename = require("gulp-rename");
+var sourcemaps = require('gulp-sourcemaps');
 
 // SASS TASK - incuding autoprefixer - converts all scss documents to css
 gulp.task(
@@ -19,18 +20,34 @@ gulp.task(
   }
 );
 
-// CSS TASK - minifies the readable css
+// CSS TASK - minifies the readable css and adds a sourcemap
 gulp.task(
   'css', function(done) {
     gulp.src('./css/style.readable.css')
+      .pipe(sourcemaps.init())
       .pipe(uglifycss({
         "uglyComments": true
       }))
       .pipe(rename('style.min.css'))
+      .pipe(gulp.dest('./css'))
+      .pipe(sourcemaps.write('./maps'))
       .pipe(gulp.dest('./css'));
       done();
   }
 );
+
+// CSS TASK - minifies the readable css
+// gulp.task(
+//   'css', function(done) {
+//     gulp.src('./css/style.readable.css')
+//       .pipe(uglifycss({
+//         "uglyComments": true
+//       }))
+//       .pipe(rename('style.min.css'))
+//       .pipe(gulp.dest('./css'));
+//       done();
+//   }
+// );
 
 // RUN TASK
 gulp.task('run', gulp.series('sass', 'css'));
