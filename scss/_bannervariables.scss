@@ -16,3 +16,22 @@ $dividers: (
     background: $url;
   }
 }
+
+// $moredividers: {
+//   #another-divider-1
+//   #another-divider-2
+//   #another-divider-3
+//   #another-divider-4
+//   #another-divider-5
+//   #another-divider-6
+//   #another-divider-7
+//   #another-divider-8
+//   #another-divider-9
+//   #another-divider-10
+// };
+//
+// @each $moredivider in $moredividers {
+//     #{$moredividers} {
+//       background-position: left;
+//     }
+// }
