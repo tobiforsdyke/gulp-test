@@ -8,7 +8,7 @@ $dividers: (
   'divider-7': url(images/wacarts-divider7.jpg),
   'divider-8': url(images/wacarts-divider8.jpg),
   'divider-9': url(images/wacarts-divider9.jpg),
-  'divider-10': url(images/wacarts-divider10.jpg),
+  'divider-30b': url(images/wacarts-divider10.jpg),
 );
 
 @each $divider, $url in $dividers {

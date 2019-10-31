@@ -1,8 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var uglifycss = require('gulp-uglifycss');
+// var uglifycss = require('gulp-uglifycss');
 const autoprefixer = require('gulp-autoprefixer');
 var rename = require("gulp-rename");
+let cleanCSS = require('gulp-clean-css');
+let sourcemaps = require('gulp-sourcemaps');
 
 // SASS TASK - incuding autoprefixer - converts all scss documents to css
 gulp.task(
@@ -19,21 +21,42 @@ gulp.task(
   }
 );
 
-// CSS TASK - minifies the readable css
+// CSS TASK - minifies the readable css and adds a sourcemap
 gulp.task(
   'css', function(done) {
-    gulp.src('./css/style.readable.css')
-      .pipe(uglifycss({
-        "uglyComments": true
-      }))
+    return gulp.src('./css/style.readable.css')
+      .pipe(cleanCSS())
       .pipe(rename('style.min.css'))
       .pipe(gulp.dest('./css'));
       done();
   }
 );
 
+// SOURCEMAPS TASK
+gulp.task(
+  'maps', function(done) {
+    return gulp.src('./css/style.min.css')
+      .pipe(sourcemaps.init())
+      .pipe(sourcemaps.write('./maps'));
+      done();
+  }
+);
+
+// CSS TASK - minifies the readable css
+// gulp.task(
+//   'css', function(done) {
+//     gulp.src('./css/style.readable.css')
+//       .pipe(uglifycss({
+//         "uglyComments": true
+//       }))
+//       .pipe(rename('style.min.css'))
+//       .pipe(gulp.dest('./css'));
+//       done();
+//   }
+// );
+
 // RUN TASK
-gulp.task('run', gulp.series('sass', 'css'));
+gulp.task('run', gulp.series('sass', 'css', 'maps'));
 
 // WATCH TASK
 gulp.task('watch', function() {
